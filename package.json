@@ -5,13 +5,15 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build main-ui",
+    "lint": "ng lint main-ui",
     "watch": "ng build main-ui --watch --configuration development",
     "test": "ng test main-ui",
     "build:auth": "ng build auth",
     "test:auth": "ng test auth",
+    "lint:auth": "ng lint auth",
     "start:mfe:reports-ui": "ng serve reports-ui",
     "build:mfe:reports-ui": "ng build reports-ui",
-    "lint": "ng lint"
+    "lint:mfe:reports-ui": "ng lint reports-ui"
   },
   "private": true,
   "dependencies": {

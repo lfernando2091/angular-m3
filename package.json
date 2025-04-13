@@ -13,6 +13,7 @@
     "lint:auth": "ng lint auth",
     "start:mfe:reports-ui": "ng serve reports-ui",
     "build:mfe:reports-ui": "ng build reports-ui",
+    "test:mfe:reports-ui": "ng test reports-ui",
     "lint:mfe:reports-ui": "ng lint reports-ui"
   },
   "private": true,

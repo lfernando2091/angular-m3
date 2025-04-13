@@ -11,4 +11,6 @@ ng g angular-eslint:add-eslint-to-project main-ui
 ng g angular-eslint:add-eslint-to-project auth
 ng g angular-eslint:add-eslint-to-project reports-ui
 
+ng g config karma main-ui
+
 ```

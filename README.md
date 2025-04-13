@@ -15,7 +15,7 @@ ng g config karma --project=main-ui
 
 npm i -D @angular-devkit/architect
 
-ng add @angular-architects/module-federation --project main-ui --type host --port 4200
-ng add @angular-architects/module-federation --project reports-ui --type remote --port 4201
+ng add @angular-architects/module-federation@15 --project main-ui --type host --port 4200
+ng add @angular-architects/module-federation@15 --project reports-ui --type remote --port 4201
 
 ```

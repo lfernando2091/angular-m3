@@ -30,6 +30,7 @@
 							"projects/main-ui/src/assets"
 						],
 						"styles": [
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
 							"projects/main-ui/src/styles.scss"
 						],
 						"scripts": [],
@@ -103,8 +104,9 @@
 							"projects/main-ui/src/assets"
 						],
 						"styles": [
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
 							"projects/main-ui/src/styles.scss"
-						],
+            ],
 						"scripts": [],
 						"codeCoverage": true,
 						"karmaConfig": "projects/main-ui/karma.conf.js"

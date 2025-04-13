@@ -20,4 +20,6 @@ ng add @angular-architects/module-federation@15 --project reports-ui --type remo
 
 ng g m pages --project reports-ui --routing
 
+ng add @angular/material --project main-ui
+
 ```

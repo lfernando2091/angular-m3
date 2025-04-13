@@ -96,7 +96,8 @@
               "projects/main-ui/src/styles.scss"
             ],
             "scripts": [],
-            "codeCoverage": true
+            "codeCoverage": true,
+            "karmaConfig": "projects/main-ui/karma.conf.js"
           }
         },
         "lint": {

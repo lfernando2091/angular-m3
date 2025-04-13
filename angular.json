@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/main-ui/**/*.ts",
+              "projects/main-ui/**/*.html"
+            ],
+            "eslintConfig": "projects/main-ui/eslint.config.js"
+          }
         }
       }
     },
@@ -129,6 +139,16 @@
               "zone.js",
               "zone.js/testing"
             ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/libs/auth/**/*.ts",
+              "projects/libs/auth/**/*.html"
+            ],
+            "eslintConfig": "projects/libs/auth/eslint.config.js"
           }
         }
       }
@@ -227,8 +247,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/mfe/reports-ui/**/*.ts",
+              "projects/mfe/reports-ui/**/*.html"
+            ],
+            "eslintConfig": "projects/mfe/reports-ui/eslint.config.js"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }

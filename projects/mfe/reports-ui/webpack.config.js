@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'reports-ui',
 
   exposes: {
-    './Component': './projects/mfe/reports-ui/src/app/app.component.ts',
+    './Module': './projects/mfe/reports-ui/src/app/pages/pages.module.ts',
   },
 
   shared: {

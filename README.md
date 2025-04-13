@@ -18,4 +18,6 @@ npm i -D @angular-devkit/architect
 ng add @angular-architects/module-federation@15 --project main-ui --type host --port 4200
 ng add @angular-architects/module-federation@15 --project reports-ui --type remote --port 4201
 
+ng g m pages --project reports-ui --routing
+
 ```

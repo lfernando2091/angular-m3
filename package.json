@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve main-ui",
+    "start": "ng serve main-ui -o",
     "build": "ng build main-ui",
     "lint": "ng lint main-ui",
     "watch": "ng build main-ui --watch --configuration development",
@@ -11,7 +11,7 @@
     "build:auth": "ng build auth",
     "test:auth": "ng test auth",
     "lint:auth": "ng lint auth",
-    "start:mfe:reports-ui": "ng serve reports-ui",
+    "start:mfe:reports-ui": "ng serve reports-ui -o",
     "build:mfe:reports-ui": "ng build reports-ui",
     "test:mfe:reports-ui": "ng test reports-ui",
     "lint:mfe:reports-ui": "ng lint reports-ui",

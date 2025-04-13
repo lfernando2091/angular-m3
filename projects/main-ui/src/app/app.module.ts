@@ -12,7 +12,7 @@ import { AuthModule } from 'auth';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule
+    AuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

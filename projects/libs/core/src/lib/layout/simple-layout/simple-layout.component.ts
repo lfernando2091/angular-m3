@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
+import {DrawerService} from "../service/drawer.service";
 
 @Component({
   selector: 'lib-simple-layout',
-  template: `
-    <div>
-      simple layout works!
-      <ng-content></ng-content>
-    </div>
-  `,
-  styles: [
-  ]
+  templateUrl: './simple-layout.component.html',
+  styleUrls: ['./simple-layout.component.scss']
 })
 export class SimpleLayoutComponent {
+  showFiller = false;
+  $opened = this.drawerService.$opened;
 
+  constructor(private drawerService: DrawerService) {
+  }
 }

@@ -4,6 +4,9 @@
     "paths": {
       "auth": [
         "./projects/libs/auth/src/public-api.ts"
+      ],
+      "core": [
+        "./projects/libs/core/src/public-api.ts"
       ]
     },
     "baseUrl": "./",

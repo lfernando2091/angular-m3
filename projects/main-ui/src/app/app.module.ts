@@ -5,22 +5,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from 'auth';
-import {MatSlideToggleModule} from "@angular/material/slide-toggle";
-
-const MAT_IMPORTS = [
-  MatSlideToggleModule
-];
+import {HomeComponent} from "./component/home/home.component";
+import {CoreModule} from "core";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     AuthModule.forRoot(),
-    ...MAT_IMPORTS
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

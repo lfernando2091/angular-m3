@@ -27,6 +27,6 @@ module.exports = withModuleFederationPlugin({
     },
   }),
 
-  sharedMappings: ['auth'],
+  sharedMappings: ['auth', 'core'],
 
 });

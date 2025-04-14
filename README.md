@@ -12,6 +12,7 @@ ng g angular-eslint:add-eslint-to-project auth
 ng g angular-eslint:add-eslint-to-project reports-ui
 
 ng g config karma --project=main-ui
+ng g config karma --project=reports-ui
 
 npm i -D @angular-devkit/architect
 

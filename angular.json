@@ -269,7 +269,8 @@
 							"projects/mfe/reports-ui/src/styles.scss"
 						],
 						"scripts": [],
-						"codeCoverage": true
+            "codeCoverage": true,
+            "karmaConfig": "projects/mfe/reports-ui/karma.conf.js"
 					}
 				},
 				"lint": {

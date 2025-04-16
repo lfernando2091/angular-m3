@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from 'auth';
 import {HomeComponent} from "./component/home/home.component";
 import {CoreModule} from "core";
+import {AppGuardService} from "./app.guard";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import {CoreModule} from "core";
     AuthModule.forRoot(),
     CoreModule
   ],
-  providers: [],
+  providers: [
+    AppGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,24 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { loadRemoteModule } from '@angular-architects/module-federation';
-import {HomeComponent} from "./component/home/home.component";
 import {hasAccess} from "./app.guard";
+import {AuthComponent, LoginComponent, CallbackComponent} from "auth";
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: () => import('./pages/pages.module')
+      .then(m => m.PagesModule),
     canActivate: [hasAccess]
   },
   {
-    path: 'reports-ui',
-    loadChildren: () =>
-      loadRemoteModule({
-        type: 'manifest',
-        remoteName: 'reports-ui',
-        exposedModule: './Module'
-      }).then(m => m.PagesModule)
+    path: 'auth',
+    component: AuthComponent,
+    children: [
+      {
+        path: '',
+        component: LoginComponent
+      },
+      {
+        path: 'callback',
+        component: CallbackComponent
+      }
+    ]
   },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

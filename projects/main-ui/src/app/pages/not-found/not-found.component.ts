@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-auth',
+  selector: 'app-not-found',
   template: `
-    <router-outlet></router-outlet>
+    <p>
+      Not Found
+    </p>
   `,
   styles: [
   ]
 })
-export class AuthComponent {
+export class NotFoundComponent {
 
 }

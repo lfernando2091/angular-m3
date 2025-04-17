@@ -2,15 +2,23 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import { AuthComponent } from './component/auth.component';
 import {AUTH_OPTIONS, AuthOptions, DEFAULT_AUTH_OPTIONS} from "./auth.options";
 import {AuthService} from "./service/auth.service";
+import {RouterModule} from "@angular/router";
+import {LoginComponent} from "./component/login/login.component";
+import {CallbackComponent} from "./component/callback/callback.component";
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    LoginComponent,
+    CallbackComponent,
   ],
   imports: [
+    RouterModule
   ],
   exports: [
-    AuthComponent
+    AuthComponent,
+    LoginComponent,
+    CallbackComponent
   ]
 })
 export class AuthModule {

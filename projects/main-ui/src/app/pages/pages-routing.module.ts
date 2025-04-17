@@ -23,10 +23,10 @@ const routes: Routes = [
             exposedModule: './Module'
           }).then(m => m.PagesModule)
       },
-      {
-        path: '**',
-        component: NotFoundComponent,
-      },
+      // {
+      //   path: '**',
+      //   component: NotFoundComponent,
+      // },
     ]
   }
 ];

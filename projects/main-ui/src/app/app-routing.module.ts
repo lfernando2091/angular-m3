@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {hasAccess} from "./app.guard";
-import {AuthComponent, LoginComponent, CallbackComponent} from "auth";
+import {AuthComponent, LoginComponent, CallbackComponent, LogoutComponent} from "auth";
 
 const routes: Routes = [
   {
@@ -17,6 +17,10 @@ const routes: Routes = [
       {
         path: '',
         component: LoginComponent
+      },
+      {
+        path: 'logout',
+        component: LogoutComponent
       },
       {
         path: 'callback',

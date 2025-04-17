@@ -5,12 +5,14 @@ import {AuthService} from "./service/auth.service";
 import {RouterModule} from "@angular/router";
 import {LoginComponent} from "./component/login/login.component";
 import {CallbackComponent} from "./component/callback/callback.component";
+import {LogoutComponent} from "./component/logout/logout.component";
 
 @NgModule({
   declarations: [
     AuthComponent,
     LoginComponent,
     CallbackComponent,
+    LogoutComponent
   ],
   imports: [
     RouterModule
@@ -18,7 +20,8 @@ import {CallbackComponent} from "./component/callback/callback.component";
   exports: [
     AuthComponent,
     LoginComponent,
-    CallbackComponent
+    CallbackComponent,
+    LogoutComponent
   ]
 })
 export class AuthModule {

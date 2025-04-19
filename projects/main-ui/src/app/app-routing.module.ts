@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {hasAccess} from "./app.guard";
+import {canActivate, redirectLoggedInTo, redirectUnauthorizedTo} from "./app.guard";
 import {AuthComponent, LoginComponent, CallbackComponent, LogoutComponent} from "auth";
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo("/auth")
+const redirectLoggedInToHome = () => redirectLoggedInTo(['/']);
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/pages.module')
       .then(m => m.PagesModule),
-    canActivate: [hasAccess]
+    ...canActivate(redirectUnauthorizedToLogin)
   },
   {
     path: 'auth',
@@ -16,7 +19,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: LoginComponent
+        component: LoginComponent,
+        ...canActivate(redirectLoggedInToHome)
       },
       {
         path: 'logout',

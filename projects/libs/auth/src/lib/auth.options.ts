@@ -7,7 +7,7 @@ export interface AuthOptions {
 
 export const DEFAULT_AUTH_OPTIONS: AuthOptions = {
   url: "<SET_LOGIN_URL>",
-  loginPageUrl: "/login",
+  loginPageUrl: "/auth",
 }
 
 export const AUTH_OPTIONS = new InjectionToken<AuthOptions>('Auth Options');

@@ -1,6 +1,44 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
+@use "palette" as m3-palette;
 
 @include mat.core();
+
+$dark-primary-text: #191c1e;
+$light-primary-text: #e2e2e5;
+
+$aa-blue-palette: (
+  50: #fcfcff,
+  100: #ebf5ff,
+  200: #e0f0ff,
+  300: #c9e6ff,
+  400: #8aceff,
+  500: #3699d2,
+  600: #006491,
+  700: #003d5a,
+  800: #00344e,
+  900: #002235,
+  A100: #007fb6,
+  A200: #004c6e,
+  A400: #003854,
+  A700: #002d44,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
 
 // Define a dark theme
 $dark-theme: mat.define-dark-theme((
@@ -16,17 +54,24 @@ $dark-theme: mat.define-dark-theme((
 // Define a light theme
 $light-theme: mat.define-light-theme((
   color: (
-    primary: mat.define-palette(mat.$indigo-palette),
+    primary: mat.define-palette($aa-blue-palette),
     accent: mat.define-palette(mat.$pink-palette),
   ),
 ));
+
+$light-m3-theme: m3-palette.get-design-tokens(m3-palette.$aa-m3-tonal-palette, 'light');
+
+.my-color {
+  color: m3-palette.get-theme-token($light-m3-theme, 'on-primary');
+  background-color: m3-palette.get-theme-token($light-m3-theme, 'primary');
+}
 
 // Apply the dark theme by default
 //@include mat.core-theme($dark-theme);
 //@include mat.button-theme($dark-theme);
 //@include mat.slide-toggle-theme($dark-theme);
 
-@include mat.all-component-themes($dark-theme);
+@include mat.all-component-themes($light-theme);
 
 // Apply the light theme only when the user prefers light themes.
 @media (prefers-color-scheme: light) {

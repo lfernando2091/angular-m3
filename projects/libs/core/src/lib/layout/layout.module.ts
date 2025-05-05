@@ -7,6 +7,7 @@ import { HeaderComponent } from './component/header/header.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {DrawerService} from "./service/drawer.service";
+import {NavigationComponent} from "./component/navigation/navigation.component";
 
 const MAT_IMPORTS = [
   MatSidenavModule,
@@ -22,7 +23,8 @@ const MAT_IMPORTS = [
   ],
   declarations: [
     SimpleLayoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    NavigationComponent
   ],
   exports: [
     SimpleLayoutComponent

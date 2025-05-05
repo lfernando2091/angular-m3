@@ -1,11 +1,11 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer [opened]="$opened | async" class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+<mat-drawer-container class="root-container" autosize>
+  <mat-drawer [opened]="$opened | async" mode="side">
+    <lib-navigation></lib-navigation>
   </mat-drawer>
-  <lib-header></lib-header>
-  <ng-content></ng-content>
+  <mat-drawer-content class="main-content">
+    <div class="container">
+      <lib-header></lib-header>
+      <ng-content></ng-content>
+    </div>
+  </mat-drawer-content>
 </mat-drawer-container>

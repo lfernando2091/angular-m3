@@ -1,0 +1,318 @@
+@use 'sass:map';
+
+$aa-blue-m3-tone: (
+  0: #000000,
+  4: #00101b,
+  6: #001523,
+  10: #001e2f,
+  12: #002235,
+  17: #002d44,
+  20: #00344e,
+  22: #003854,
+  24: #003d5a,
+  30: #004c6e,
+  40: #006491,
+  50: #007fb6,
+  60: #3699d2,
+  70: #57b4ee,
+  80: #8aceff,
+  87: #b7dfff,
+  90: #c9e6ff,
+  92: #d4ebff,
+  94: #e0f0ff,
+  95: #e5f2ff,
+  96: #ebf5ff,
+  98: #f6faff,
+  99: #fcfcff,
+  100: #ffffff
+);
+
+$aa-gray-m3-tone: (
+  0: #000000,
+  4: #00101b,
+  6: #041520,
+  10: #0c1d29,
+  12: #10212d,
+  17: #1b2c38,
+  20: #22323f,
+  22: #263743,
+  24: #2a3b48,
+  30: #384956,
+  40: #50606e,
+  50: #687988,
+  60: #8193a2,
+  70: #9cadbd,
+  80: #b7c9d9,
+  87: #cadced,
+  90: #d3e5f5,
+  92: #d8eafb,
+  94: #e0f0ff,
+  95: #e5f2ff,
+  96: #ebf5ff,
+  98: #f6faff,
+  99: #fcfcff,
+  100: #ffffff
+);
+
+$aa-ternary-m3-tone: (
+  0: #000000,
+  4: #120826,
+  6: #170d2c,
+  10: #201635,
+  12: #241a39,
+  17: #2e2544,
+  20: #352b4b,
+  22: #392f4f,
+  24: #3e3454,
+  30: #4c4163,
+  40: #64597b,
+  50: #7d7195,
+  60: #978bb0,
+  70: #b2a5cc,
+  80: #cec0e8,
+  87: #e2d3fc,
+  90: #eaddff,
+  92: #efe3ff,
+  94: #f4eaff,
+  95: #f6edff,
+  96: #f9f1ff,
+  98: #fef7ff,
+  99: #fffbff,
+  100: #ffffff
+);
+
+$aa-neutral-m3-tone: (
+  0: #000000,
+  4: #0c0e11,
+  6: #111416,
+  10: #191c1e,
+  12: #1e2022,
+  17: #282a2c,
+  20: #2e3133,
+  22: #333537,
+  24: #37393c,
+  30: #454749,
+  40: #5d5e61,
+  50: #75777a,
+  60: #8f9193,
+  70: #aaabae,
+  80: #c5c6c9,
+  87: #d9dadd,
+  90: #e2e2e5,
+  92: #e7e8eb,
+  94: #edeef0,
+  95: #f0f0f3,
+  96: #f3f3f6,
+  98: #f9f9fc,
+  99: #fcfcff,
+  100: #ffffff
+);
+
+$aa-neutral-variant-m3-tone: (
+  0: #000000,
+  4: #090f14,
+  6: #0e1419,
+  10: #161c21,
+  12: #1a2025,
+  17: #242b30,
+  20: #2b3137,
+  22: #2f353b,
+  24: #343a3f,
+  30: #41474d,
+  40: #595f65,
+  50: #71787e,
+  60: #8b9198,
+  70: #a6acb3,
+  80: #c1c7ce,
+  87: #d5dbe2,
+  90: #dde3ea,
+  92: #e3e9f0,
+  94: #e9eef6,
+  95: #ecf1f8,
+  96: #eef4fb,
+  98: #f6faff,
+  99: #fcfcff,
+  100: #ffffff
+);
+
+$aa-error-m3-tone: (
+  0: #000000,
+  4: #280001,
+  6: #310001,
+  10: #410002,
+  12: #490002,
+  17: #5c0004,
+  20: #690005,
+  22: #710005,
+  24: #790006,
+  30: #93000a,
+  40: #ba1a1a,
+  50: #de3730,
+  60: #ff5449,
+  70: #ff897d,
+  80: #ffb4ab,
+  87: #ffcfc9,
+  90: #ffdad6,
+  92: #ffe2de,
+  94: #ffe9e6,
+  95: #ffedea,
+  96: #fff0ee,
+  98: #fff8f7,
+  99: #fffbff,
+  100: #ffffff
+);
+
+$aa-m3-tonal-palette: (
+  primary: $aa-blue-m3-tone,
+  secondary: $aa-gray-m3-tone,
+  ternary: $aa-ternary-m3-tone,
+  neutral: $aa-neutral-m3-tone,
+  neutral-variant: $aa-neutral-variant-m3-tone,
+  error: $aa-error-m3-tone,
+);
+
+$info-colors: (
+  light: (
+    color: #006495,
+    on-color: #ffffff,
+    color-container: #cbe6ff,
+    on-color-container: #001e31,
+  ),
+  dark: (
+    color: #90cdff,
+    on-color: #003350,
+    color-container: #004b72,
+    on-color-container: #cbe6ff,
+  )
+);
+
+$success-colors: (
+  light: (
+    color: #006d43,
+    on-color: #ffffff,
+    color-container: #92f7bc,
+    on-color-container: #002111,
+  ),
+  dark: (
+    color: #76daa1,
+    on-color: #003920,
+    color-container: #005231,
+    on-color-container: #92f7bc,
+  )
+);
+
+$warning-colors: (
+  light: (
+    color: #795900,
+    on-color: #ffffff,
+    color-container: #ffdf9f,
+    on-color-container: #261a00,
+  ),
+  dark: (
+    color: #f8bd26,
+    on-color: #402d00,
+    color-container: #5b4300,
+    on-color-container: #ffdf9f,
+  )
+);
+
+@function get-colors($colors, $theme-style) {
+  @return map.get($colors, $theme-style);
+}
+
+@function get-color-token($tonal-palette, $theme-style, $light-level, $dark-level) {
+  @if $theme-style == 'light' {
+    @return map.get($tonal-palette, $light-level);
+  }
+  @return map.get($tonal-palette, $dark-level);
+}
+
+@function get-theme-token($theme, $token) {
+  @return map.get($theme, $token);
+}
+
+@function get-design-tokens($tonal-palette, $theme-style) {
+  @return (
+    primary: get-color-token(map.get($tonal-palette, primary), $theme-style, 40, 80),
+    on-primary: get-color-token(map.get($tonal-palette, primary), $theme-style, 100, 20),
+    primary-container: get-color-token(map.get($tonal-palette, primary), $theme-style, 90, 30),
+    on-primary-container: get-color-token(map.get($tonal-palette, primary), $theme-style, 10, 90),
+
+    secondary: get-color-token(map.get($tonal-palette, secondary), $theme-style, 40, 80),
+    on-secondary: get-color-token(map.get($tonal-palette, secondary), $theme-style, 100, 20),
+    secondary-container: get-color-token(map.get($tonal-palette, secondary), $theme-style, 90, 30),
+    on-secondary-container: get-color-token(map.get($tonal-palette, secondary), $theme-style, 10, 90),
+
+    ternary: get-color-token(map.get($tonal-palette, ternary), $theme-style, 40, 80),
+    on-ternary: get-color-token(map.get($tonal-palette, ternary), $theme-style, 100, 20),
+    ternary-container: get-color-token(map.get($tonal-palette, ternary), $theme-style, 90, 30),
+    on-ternary-container: get-color-token(map.get($tonal-palette, ternary), $theme-style, 10, 90),
+
+    error: get-color-token(map.get($tonal-palette, error), $theme-style, 40, 80),
+    on-error: get-color-token(map.get($tonal-palette, error), $theme-style, 100, 20),
+    error-container: get-color-token(map.get($tonal-palette, error), $theme-style, 90, 30),
+    on-error-container: get-color-token(map.get($tonal-palette, error), $theme-style, 10, 90),
+
+    primary-fixed: get-color-token(map.get($tonal-palette, primary), $theme-style, 90, 90),
+    primary-fixed-dim: get-color-token(map.get($tonal-palette, primary), $theme-style, 80, 80),
+    on-primary-fixed: get-color-token(map.get($tonal-palette, primary), $theme-style, 10, 10),
+    on-primary-fixed-variant: get-color-token(map.get($tonal-palette, primary), $theme-style, 30, 30),
+
+    secondary-fixed: get-color-token(map.get($tonal-palette, secondary), $theme-style, 90, 90),
+    secondary-fixed-dim: get-color-token(map.get($tonal-palette, secondary), $theme-style, 80, 80),
+    on-secondary-fixed: get-color-token(map.get($tonal-palette, secondary), $theme-style, 10, 10),
+    on-secondary-fixed-variant: get-color-token(map.get($tonal-palette, secondary), $theme-style, 30, 30),
+
+    ternary-fixed: get-color-token(map.get($tonal-palette, ternary), $theme-style, 90, 90),
+    ternary-fixed-dim: get-color-token(map.get($tonal-palette, ternary), $theme-style, 80, 80),
+    on-ternary-fixed: get-color-token(map.get($tonal-palette, ternary), $theme-style, 10, 10),
+    on-ternary-fixed-variant: get-color-token(map.get($tonal-palette, ternary), $theme-style, 30, 30),
+
+    surface: get-color-token(map.get($tonal-palette, neutral), $theme-style, 98, 6),
+    on-surface: get-color-token(map.get($tonal-palette, neutral), $theme-style, 10, 90),
+
+    surface-dim: get-color-token(map.get($tonal-palette, neutral), $theme-style, 87, 6),
+    surface-bright: get-color-token(map.get($tonal-palette, neutral), $theme-style, 98, 24),
+
+    surface-container-lowest: get-color-token(map.get($tonal-palette, neutral), $theme-style, 100, 4),
+    surface-container-low: get-color-token(map.get($tonal-palette, neutral), $theme-style, 96, 10),
+    surface-container: get-color-token(map.get($tonal-palette, neutral), $theme-style, 94, 12),
+    surface-container-high: get-color-token(map.get($tonal-palette, neutral), $theme-style, 92, 17),
+    surface-container-highest: get-color-token(map.get($tonal-palette, neutral), $theme-style, 90, 20),
+
+    surface-variant: get-color-token(map.get($tonal-palette, 'neutral-variant'), $theme-style, 90, 30),
+    on-surface-variant: get-color-token(map.get($tonal-palette, 'neutral-variant'), $theme-style, 30, 80),
+
+    outline: get-color-token(map.get($tonal-palette, 'neutral-variant'), $theme-style, 50, 60),
+    outline-variant: get-color-token(map.get($tonal-palette, 'neutral-variant'), $theme-style, 80, 30),
+
+    inverse-surface: get-color-token(map.get($tonal-palette, neutral), $theme-style, 20, 90),
+    inverse-on-surface: get-color-token(map.get($tonal-palette, neutral), $theme-style, 95, 20),
+
+    inverse-primary: get-color-token(map.get($tonal-palette, primary), $theme-style, 80, 40),
+    inverse-on-primary: get-color-token(map.get($tonal-palette, primary), $theme-style, 10, 90),
+
+    shadow: get-color-token(map.get($tonal-palette, neutral), $theme-style, 0, 0),
+    scrim: get-color-token(map.get($tonal-palette, neutral), $theme-style, 0, 0),
+
+    surface-tint-color: get-color-token(map.get($tonal-palette, primary), $theme-style, 40, 80),
+
+    background: get-color-token(map.get($tonal-palette, neutral), $theme-style, 98, 6),
+    on-background: get-color-token(map.get($tonal-palette, neutral), $theme-style, 10, 90),
+
+    info: map.get(get-colors($info-colors, $theme-style), color),
+    on-info: map.get(get-colors($info-colors, $theme-style), 'on-color'),
+    info-container: map.get(get-colors($info-colors, $theme-style), 'color-container'),
+    on-info-container: map.get(get-colors($info-colors, $theme-style), 'on-color-container'),
+
+    success: map.get(get-colors($success-colors, $theme-style), color),
+    on-success: map.get(get-colors($success-colors, $theme-style), 'on-color'),
+    success-container: map.get(get-colors($success-colors, $theme-style), 'color-container'),
+    on-success-container: map.get(get-colors($success-colors, $theme-style), 'on-color-container'),
+
+    warning: map.get(get-colors($warning-colors, $theme-style), color),
+    on-warning: map.get(get-colors($warning-colors, $theme-style), 'on-color'),
+    warning-container: map.get(get-colors($warning-colors, $theme-style), 'color-container'),
+    on-warning-container: map.get(get-colors($warning-colors, $theme-style), 'on-color-container'),
+  );
+}

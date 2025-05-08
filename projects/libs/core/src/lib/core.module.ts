@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CoreComponent } from './component/core.component';
-import {LayoutModule} from "./layout/layout.module";
+import { LayoutModule } from "./layout/layout.module";
 
 @NgModule({
   imports: [
@@ -10,7 +10,7 @@ import {LayoutModule} from "./layout/layout.module";
   ],
   exports: [
     CoreComponent,
-    LayoutModule,
+    LayoutModule
   ]
 })
 export class CoreModule { }

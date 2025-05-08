@@ -62,26 +62,37 @@ $light-theme: mat.define-light-theme((
 $light-m3-theme: m3-palette.get-design-tokens(m3-palette.$aa-m3-tonal-palette, 'light');
 $dark-m3-theme: m3-palette.get-design-tokens(m3-palette.$aa-m3-tonal-palette, 'dark');
 
-// Apply the dark theme by default
-//@include mat.core-theme($dark-theme);
-//@include mat.button-theme($dark-theme);
-//@include mat.slide-toggle-theme($dark-theme);
+// Apply the dark theme by default (when .dark-theme class is present or no specific theme class)
+.dark-theme {
+  @include mat.all-component-themes($dark-theme);
 
-@include mat.all-component-themes($dark-theme);
+  .main-content {
+    background-color: m3-palette.get-theme-token($dark-m3-theme, 'surface-container');
+  }
+}
 
-// Apply the light theme only when the user prefers light themes.
-@media (prefers-color-scheme: light) {
-  //Use the `-color` mixins to only apply color styles without reapplying the same
-  //typography and density styles.
-  @include mat.core-color($light-theme);
-  @include mat.button-color($light-theme);
-  @include mat.slide-toggle-color($light-theme);
+// Apply the light theme when .light-theme class is present
+.light-theme {
+  @include mat.all-component-themes($light-theme);
 
   .main-content {
     background-color: m3-palette.get-theme-token($light-m3-theme, 'surface-container');
   }
 }
 
-.main-content {
-  background-color: m3-palette.get-theme-token($dark-m3-theme, 'surface-container');
+// Default theme (for backwards compatibility)
+body:not(.light-theme):not(.dark-theme) {
+  @include mat.all-component-themes($dark-theme);
+
+  .main-content {
+    background-color: m3-palette.get-theme-token($dark-m3-theme, 'surface-container');
+  }
+
+  @media (prefers-color-scheme: light) {
+    @include mat.all-component-themes($light-theme);
+
+    .main-content {
+      background-color: m3-palette.get-theme-token($light-m3-theme, 'surface-container');
+    }
+  }
 }

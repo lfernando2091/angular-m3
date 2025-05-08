@@ -1,5 +1,11 @@
 @use 'theme';
 
-html { color-scheme: light }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Default to system preference for color-scheme
+html { color-scheme: light dark; }
+
+// Apply specific color-scheme based on theme class
+.light-theme html { color-scheme: light; }
+.dark-theme html { color-scheme: dark; }

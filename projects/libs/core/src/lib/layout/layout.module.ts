@@ -8,6 +8,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {DrawerService} from "./service/drawer.service";
 import {NavigationComponent} from "./component/navigation/navigation.component";
+import { ThemeSwitcherModule } from '../component/theme-switcher/theme-switcher.module';
 
 const MAT_IMPORTS = [
   MatSidenavModule,
@@ -19,7 +20,8 @@ const MAT_IMPORTS = [
 @NgModule({
   imports: [
     CommonModule,
-    ...MAT_IMPORTS
+    ...MAT_IMPORTS,
+    ThemeSwitcherModule
   ],
   declarations: [
     SimpleLayoutComponent,

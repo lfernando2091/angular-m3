@@ -1,0 +1,22 @@
+<div class="theme-switcher">
+  <button mat-button [matMenuTriggerFor]="themeMenu" class="theme-menu-button">
+    <mat-icon>palette</mat-icon>
+    <span class="button-label">Theme</span>
+  </button>
+
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item *ngFor="let theme of availableThemes"
+            [class.active-theme]="(activeTheme$ | async) === theme.value"
+            (click)="setTheme(theme.value)">
+      <mat-icon>{{ theme.value === 'dark-theme' ? 'dark_mode' : 'light_mode' }}</mat-icon>
+      <span>{{ theme.name }}</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-menu-item (click)="setTheme('system-theme')">
+      <mat-icon>settings_suggest</mat-icon>
+      <span>System</span>
+    </button>
+  </mat-menu>
+</div>

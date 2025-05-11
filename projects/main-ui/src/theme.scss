@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
-@use "palette" as m3-palette;
+@use "theme/palette" as m3-palette;
+@use "theme/sidenav-theme" as m3-sidenav-theme;
 
 @include mat.core();
 
@@ -65,34 +66,22 @@ $dark-m3-theme: m3-palette.get-design-tokens(m3-palette.$aa-m3-tonal-palette, 'd
 // Apply the dark theme by default (when .dark-theme class is present or no specific theme class)
 .dark-theme {
   @include mat.all-component-themes($dark-theme);
-
-  .main-content {
-    background-color: m3-palette.get-theme-token($dark-m3-theme, 'surface-container');
-  }
+  @include m3-sidenav-theme.m3-color($dark-m3-theme);
 }
 
 // Apply the light theme when .light-theme class is present
 .light-theme {
   @include mat.all-component-themes($light-theme);
-
-  .main-content {
-    background-color: m3-palette.get-theme-token($light-m3-theme, 'surface-container');
-  }
+  @include m3-sidenav-theme.m3-color($light-m3-theme);
 }
 
 // Default theme (for backwards compatibility)
 body:not(.light-theme):not(.dark-theme) {
-  @include mat.all-component-themes($dark-theme);
-
-  .main-content {
-    background-color: m3-palette.get-theme-token($dark-m3-theme, 'surface-container');
-  }
+  //@include mat.all-component-themes($dark-theme);
+  @include m3-sidenav-theme.m3-color($dark-m3-theme);
 
   @media (prefers-color-scheme: light) {
-    @include mat.all-component-themes($light-theme);
-
-    .main-content {
-      background-color: m3-palette.get-theme-token($light-m3-theme, 'surface-container');
-    }
+    //@include mat.all-component-themes($light-theme);
+    @include m3-sidenav-theme.m3-color($light-m3-theme);
   }
 }

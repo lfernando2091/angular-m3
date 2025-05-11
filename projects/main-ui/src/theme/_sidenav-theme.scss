@@ -1,0 +1,14 @@
+@use "palette" as m3-palette;
+
+@mixin m3-color($m3-theme) {
+  $background: m3-palette.get-theme-token($m3-theme, 'surface-container');
+
+  .mat-drawer {
+    background-color: $background;
+    color: red;
+  }
+
+  .mat-drawer-container {
+    background-color: $background;
+  }
+}

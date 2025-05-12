@@ -1,7 +1,7 @@
-@use "palette" as m3-palette;
-@use "elevation" as m3-elevation;
-@use "transitions" as m3-transition;
-@use "shape" as m3-shape;
+@use "m3-style/palette" as m3-palette;
+@use "m3-style/elevation" as m3-elevation;
+@use "m3-style/transitions" as m3-transition;
+@use "m3-style/shape" as m3-shape;
 
 @mixin m3-color($m3-theme) {
   .mat-drawer {
@@ -13,7 +13,6 @@
   }
 
   .mat-drawer-side {
-    border-radius: m3-shape.get(large, end);
     color: m3-palette.get-theme-token($m3-theme, 'on-surface-variant');
   }
 }
@@ -29,6 +28,7 @@
   }
 
   .mat-drawer-side {
+    border-radius: m3-shape.get(large, end);
     border: 0;
   }
 }

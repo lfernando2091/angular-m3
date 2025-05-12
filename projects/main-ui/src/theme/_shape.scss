@@ -1,0 +1,28 @@
+@use 'sass:map';
+
+$m3-shape: (
+  border-radius: 4px,
+  corner: (
+    full: ( all: 50% ),
+    extra-large: ( all: 28px, top: 28px 28px 0px 0px ),
+    large: ( all: 16px, top: 16px 16px 0px 0px, end: 0px 16px 16px 0px, start: 16px 0px 0px 16px ),
+    medium: ( all: 12px ),
+    small: ( all: 8px ),
+    extra-small: ( all: 4px, top: 4px 4px 0px 0px ),
+    none: ( all: 0px )
+  )
+);
+
+@function get($shape-name, $shape-type) {
+  $m3-shape-corner: map.get($m3-shape, corner);
+  @if map.get($m3-shape-corner, $shape-name) {
+    @if (map.get(map.get($m3-shape-corner, $shape-name), $shape-type)) {
+      @return map.get(map.get($m3-shape-corner, $shape-name), $shape-type);
+    }
+  }
+  @return map.get(map.get($m3-shape-corner, none), all);
+}
+
+@function get-border-radius() {
+  @return map.get($m3-shape, border-radius);
+}

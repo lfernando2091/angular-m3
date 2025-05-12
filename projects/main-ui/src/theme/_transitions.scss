@@ -1,0 +1,14 @@
+@use "sass:list";
+@use "motion" as m3-motion;
+
+@function append-transitions($properties, $duration, $easing-name: emphasized, $easing-type: default) {
+  $transitions: ();
+  @each $property in $properties {
+    $transitions: list.append($transitions, $property m3-motion.get-duration($duration) m3-motion.get-easing($easing-name, $easing-type), comma);
+  }
+  @return $transitions;
+}
+
+@mixin create($properties, $duration, $easing-name: emphasized, $easing-type: default) {
+  transition: append-transitions($properties, $duration, $easing-name, $easing-type);
+}

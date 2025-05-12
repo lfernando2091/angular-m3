@@ -1,14 +1,34 @@
 @use "palette" as m3-palette;
+@use "elevation" as m3-elevation;
+@use "transitions" as m3-transition;
+@use "shape" as m3-shape;
 
 @mixin m3-color($m3-theme) {
-  $background: m3-palette.get-theme-token($m3-theme, 'surface-container');
-
   .mat-drawer {
-    background-color: $background;
-    color: red;
+    background-color: m3-palette.get-theme-token($m3-theme, 'surface');
   }
 
   .mat-drawer-container {
-    background-color: $background;
+    background-color: m3-palette.get-theme-token($m3-theme, 'surface-container');
+  }
+
+  .mat-drawer-side {
+    border-radius: m3-shape.get(large, end);
+    color: m3-palette.get-theme-token($m3-theme, 'on-surface-variant');
+  }
+}
+
+@mixin m3-theme() {
+
+  .mat-drawer {
+    box-shadow: m3-elevation.get(level0);
+    @include m3-transition.create([box-shadow], emphasized, default);
+    &:hover {
+      box-shadow: m3-elevation.get(level2);
+    }
+  }
+
+  .mat-drawer-side {
+    border: 0;
   }
 }

@@ -66,12 +66,14 @@ $dark-m3-theme: m3-palette.get-design-tokens(m3-palette.$aa-m3-tonal-palette, 'd
 // Apply the dark theme by default (when .dark-theme class is present or no specific theme class)
 .dark-theme {
   @include mat.all-component-themes($dark-theme);
+  @include m3-sidenav-theme.m3-theme();
   @include m3-sidenav-theme.m3-color($dark-m3-theme);
 }
 
 // Apply the light theme when .light-theme class is present
 .light-theme {
   @include mat.all-component-themes($light-theme);
+  @include m3-sidenav-theme.m3-theme();
   @include m3-sidenav-theme.m3-color($light-m3-theme);
 }
 

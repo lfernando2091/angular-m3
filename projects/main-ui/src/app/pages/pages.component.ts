@@ -7,7 +7,8 @@ import {Component} from "@angular/core";
     <lib-simple-layout>
       <router-outlet></router-outlet>
     </lib-simple-layout>
-  `
+  `,
+  styleUrls: ['pages.component.scss'],
 })
 export class PagesComponent {
 

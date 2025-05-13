@@ -1,0 +1,31 @@
+@use "m3-style/palette" as m3-palette;
+@use "m3-style/elevation" as m3-elevation;
+
+@mixin m3-color($m3-theme) {
+  .mat-toolbar {
+    background-color: m3-palette.get-theme-token($m3-theme, 'surface');
+    color: m3-palette.get-theme-token($m3-theme, 'on-surface');
+
+    &.mat-primary {
+      background-color: m3-palette.get-theme-token($m3-theme, 'surface-container');
+      color: m3-palette.get-theme-token($m3-theme, 'on-surface');
+    }
+  }
+}
+
+@mixin m3-theme() {
+  .mat-toolbar {
+    min-height: 64px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: auto;
+    padding: 0 24px;
+    z-index: 1;
+
+    &.m3-scroll {
+      box-shadow: m3-elevation.get(level2);
+    }
+
+  }
+}

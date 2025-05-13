@@ -1,6 +1,5 @@
 .root-container {
   display: flex;
-  height: 100vh;
 }
 
 .main-content {
@@ -12,4 +11,14 @@
 .container {
   padding: 0;
   flex: 1;
+  min-height: 100vh;
+}
+
+.page-content {
+  margin: 0 16px 16px;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
 }

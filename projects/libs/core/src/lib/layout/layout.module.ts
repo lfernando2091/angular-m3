@@ -9,6 +9,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {DrawerService} from "./service/drawer.service";
 import {NavigationComponent} from "./component/navigation/navigation.component";
 import { ThemeSwitcherModule } from '../component/theme-switcher/theme-switcher.module';
+import {FooterComponent} from "./component/footer/footer.component";
 
 const MAT_IMPORTS = [
   MatSidenavModule,
@@ -26,6 +27,7 @@ const MAT_IMPORTS = [
   declarations: [
     SimpleLayoutComponent,
     HeaderComponent,
+    FooterComponent,
     NavigationComponent
   ],
   exports: [

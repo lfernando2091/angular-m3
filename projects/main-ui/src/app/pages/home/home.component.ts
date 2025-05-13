@@ -3,9 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-    <p>
-      home works!
-    </p>
+    <mat-card>
+      <mat-card-content >
+        <h1>home works!</h1>
+
+      </mat-card-content>
+    </mat-card>
   `,
   styles: [
   ]

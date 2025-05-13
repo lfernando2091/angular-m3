@@ -1,0 +1,49 @@
+@use "m3-style/palette" as m3-palette;
+@use "m3-style/elevation" as m3-elevation;
+@use "m3-style/shape" as m3-shape;
+
+@mixin m3-color($m3-theme) {
+  .mat-mdc-card {
+    background-color: m3-palette.get-theme-token($m3-theme, 'surface-container-lowest');
+    box-shadow: m3-elevation.get(level0);
+
+    &.mat-mdc-card-outlined {
+      background-color: m3-palette.get-theme-token($m3-theme, 'surface-container-low');
+      border-color: m3-palette.get-theme-token($m3-theme, 'outline-variant');
+    }
+
+    &.m3-elevation-1 {
+      background-color: m3-palette.get-theme-token($m3-theme, 'surface-container-low');
+      box-shadow: m3-elevation.get(level1);
+    }
+
+    &.m3-elevation-2 {
+      background-color: m3-palette.get-theme-token($m3-theme, 'surface-container');
+      box-shadow: m3-elevation.get(level2);
+    }
+
+    &.m3-elevation-3 {
+      background-color: m3-palette.get-theme-token($m3-theme, 'surface-container-high');
+      box-shadow: m3-elevation.get(level3);
+    }
+
+    &.m3-elevation-4 {
+      background-color: m3-palette.get-theme-token($m3-theme, 'surface-container-high');
+      box-shadow: m3-elevation.get(level4);
+    }
+
+    &.m3-elevation-5 {
+      background-color: m3-palette.get-theme-token($m3-theme, 'surface-container-highest');
+      box-shadow: m3-elevation.get(level5);
+    }
+
+  }
+}
+
+@mixin m3-theme() {
+  .mat-mdc-card {
+    border-radius: m3-shape.get(large, all);
+    padding: 0;
+    margin: 0;
+  }
+}

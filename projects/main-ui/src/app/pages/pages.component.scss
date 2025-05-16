@@ -1,6 +1,8 @@
 ::ng-deep router-outlet + * {
-  display: block;
+  display: flex;
   animation: fade 1s;
+  flex: 1;
+  flex-direction: column;
 
   @keyframes fade {
     from { opacity: 0; }

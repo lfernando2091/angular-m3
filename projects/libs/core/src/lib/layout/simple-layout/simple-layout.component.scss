@@ -1,17 +1,24 @@
 .root-container {
   display: flex;
+  height: 100vh;
 }
 
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  height: unset;
+  position: unset;
 }
 
 .container {
   padding: 0;
   flex: 1;
-  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .page-content {
@@ -21,4 +28,5 @@
   flex: 1;
   flex-direction: column;
   min-width: 0;
+  overflow-y: auto;
 }

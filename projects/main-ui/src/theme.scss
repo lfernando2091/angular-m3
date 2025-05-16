@@ -4,6 +4,7 @@
 @use "theme/sidenav-theme" as m3-sidenav-theme;
 @use "theme/toolbar-theme" as m3-toolbar-theme;
 @use "theme/card-theme" as m3-card-theme;
+@use "theme/scrollbar-theme" as m3-scrollbar-theme;
 
 @include mat.core();
 
@@ -71,6 +72,7 @@ $dark-m3-theme: m3-palette.get-design-tokens(m3-palette.$aa-m3-tonal-palette, 'd
   @include m3-sidenav-theme.m3-color($dark-m3-theme);
   @include m3-toolbar-theme.m3-color($dark-m3-theme);
   @include m3-card-theme.m3-color($dark-m3-theme);
+  @include m3-scrollbar-theme.m3-color($dark-m3-theme);
 }
 
 // Apply the light theme when .light-theme class is present
@@ -79,6 +81,7 @@ $dark-m3-theme: m3-palette.get-design-tokens(m3-palette.$aa-m3-tonal-palette, 'd
   @include m3-sidenav-theme.m3-color($light-m3-theme);
   @include m3-toolbar-theme.m3-color($light-m3-theme);
   @include m3-card-theme.m3-color($light-m3-theme);
+  @include m3-scrollbar-theme.m3-color($light-m3-theme);
 }
 
 .dark-theme,
@@ -86,6 +89,7 @@ $dark-m3-theme: m3-palette.get-design-tokens(m3-palette.$aa-m3-tonal-palette, 'd
   @include m3-sidenav-theme.m3-theme();
   @include m3-toolbar-theme.m3-theme();
   @include m3-card-theme.m3-theme();
+  @include m3-scrollbar-theme.m3-theme();
 }
 
 // Default theme (for backwards compatibility)

@@ -1,0 +1,22 @@
+@use "m3-style/palette" as m3-palette;
+@use "m3-style/shape" as m3-shape;
+
+@mixin m3-color($m3-theme) {
+  & {
+    scrollbar-color: m3-palette.get-theme-token($m3-theme, primary) transparent;
+    scrollbar-width: thin;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: m3-palette.get-theme-token($m3-theme, primary);
+    border-radius: m3-shape.get(large, all);
+  }
+}
+
+@mixin m3-theme() {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}

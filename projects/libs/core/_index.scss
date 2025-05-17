@@ -7,6 +7,7 @@
 
 @forward "./styles/m3/transitions" as transitions-* show transitions-create;
 
+@forward "./styles/components/all-theme" as all-* show all-theme, all-color;
 @forward "./styles/components/card-theme" as card-* show card-theme, card-color;
 @forward "./styles/components/scrollbar-theme" as scrollbar-* show scrollbar-theme, scrollbar-color;
 @forward "./styles/components/sidenav-theme" as sidenav-* show sidenav-theme, sidenav-color;

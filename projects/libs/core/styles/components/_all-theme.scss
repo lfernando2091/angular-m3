@@ -1,0 +1,18 @@
+@use "./card-theme" as card;
+@use "./scrollbar-theme" as scrollbar;
+@use "./sidenav-theme" as sidenav;
+@use "./toolbar-theme" as toolbar;
+
+@mixin color($m3-theme) {
+  @include card.color($m3-theme);
+  @include scrollbar.color($m3-theme);
+  @include sidenav.color($m3-theme);
+  @include toolbar.color($m3-theme);
+}
+
+@mixin theme() {
+  @include card.theme();
+  @include scrollbar.theme();
+  @include sidenav.theme();
+  @include toolbar.theme();
+}

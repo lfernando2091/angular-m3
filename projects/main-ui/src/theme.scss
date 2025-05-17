@@ -65,27 +65,18 @@ $dark-m3-theme: m3.get-design-tokens(m3.$aa-m3-tonal-palette, 'dark');
 // Apply the dark theme by default (when .dark-theme class is present or no specific theme class)
 .dark-theme {
   @include mat.all-component-colors($dark-theme);
-  @include m3.sidenav-color($dark-m3-theme);
-  @include m3.toolbar-color($dark-m3-theme);
-  @include m3.card-color($dark-m3-theme);
-  @include m3.scrollbar-color($dark-m3-theme);
+  @include m3.all-color($dark-m3-theme);
 }
 
 // Apply the light theme when .light-theme class is present
 .light-theme {
   @include mat.all-component-colors($light-theme);
-  @include m3.sidenav-color($light-m3-theme);
-  @include m3.toolbar-color($light-m3-theme);
-  @include m3.card-color($light-m3-theme);
-  @include m3.scrollbar-color($light-m3-theme);
+  @include m3.all-color($light-m3-theme);
 }
 
 .dark-theme,
 .light-theme{
-  @include m3.sidenav-theme();
-  @include m3.toolbar-theme();
-  @include m3.card-theme();
-  @include m3.scrollbar-theme();
+  @include m3.all-theme();
 }
 
 // Default theme (for backwards compatibility)

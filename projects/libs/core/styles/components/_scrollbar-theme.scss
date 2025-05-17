@@ -1,7 +1,7 @@
-@use "m3-style/palette" as m3-palette;
-@use "m3-style/shape" as m3-shape;
+@use "../m3/palette" as m3-palette;
+@use "../m3/shape" as m3-shape;
 
-@mixin m3-color($m3-theme) {
+@mixin color($m3-theme) {
   & {
     scrollbar-color: m3-palette.get-theme-token($m3-theme, primary) transparent;
     scrollbar-width: thin;
@@ -12,7 +12,7 @@
   }
 }
 
-@mixin m3-theme() {
+@mixin theme() {
   &::-webkit-scrollbar {
     width: 8px;
   }

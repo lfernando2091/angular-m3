@@ -1,5 +1,5 @@
 @use "sass:list";
-@use "motion" as m3-motion;
+@use "./motion" as m3-motion;
 
 @function append-transitions($properties, $duration, $easing-name: emphasized, $easing-type: default) {
   $transitions: ();

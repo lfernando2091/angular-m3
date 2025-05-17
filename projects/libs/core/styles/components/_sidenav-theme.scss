@@ -1,9 +1,9 @@
-@use "m3-style/palette" as m3-palette;
-@use "m3-style/elevation" as m3-elevation;
-@use "m3-style/transitions" as m3-transition;
-@use "m3-style/shape" as m3-shape;
+@use "../m3/palette" as m3-palette;
+@use "../m3/elevation" as m3-elevation;
+@use "../m3/transitions" as m3-transition;
+@use "../m3/shape" as m3-shape;
 
-@mixin m3-color($m3-theme) {
+@mixin color($m3-theme) {
   .mat-drawer {
     background-color: m3-palette.get-theme-token($m3-theme, 'surface');
   }
@@ -17,7 +17,7 @@
   }
 }
 
-@mixin m3-theme() {
+@mixin theme() {
 
   .mat-drawer {
     box-shadow: m3-elevation.get(level0);

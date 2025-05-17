@@ -1,0 +1,13 @@
+@forward "./styles/m3/palette" show $aa-m3-tonal-palette;
+
+@forward "./styles/m3/elevation" as elevation-* show elevation-get;
+@forward "./styles/m3/motion" as motion-* show motion-get-duration, motion-get-easing;
+@forward "./styles/m3/palette" show get-theme-token, get-design-tokens;
+@forward "./styles/m3/shape" as shape-* show shape-get, shape-get-border-radius;
+
+@forward "./styles/m3/transitions" as transitions-* show transitions-create;
+
+@forward "./styles/components/card-theme" as card-* show card-theme, card-color;
+@forward "./styles/components/scrollbar-theme" as scrollbar-* show scrollbar-theme, scrollbar-color;
+@forward "./styles/components/sidenav-theme" as sidenav-* show sidenav-theme, sidenav-color;
+@forward "./styles/components/toolbar-theme" as toolbar-* show toolbar-theme, toolbar-color;

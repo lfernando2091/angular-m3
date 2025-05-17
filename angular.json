@@ -34,7 +34,12 @@
             ],
             "scripts": [],
             "extraWebpackConfig": "projects/main-ui/webpack.config.js",
-            "commonChunk": false
+            "commonChunk": false,
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/libs/core"
+              ]
+            }
           },
           "configurations": {
             "production": {

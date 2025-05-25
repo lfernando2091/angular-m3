@@ -6,20 +6,57 @@ $state-layer-hover: 0.08;
 @mixin color($m3-theme) {
   $on-secondary-container: m3-palette.get-theme-token($m3-theme, 'on-secondary-container');
   $secondary-container: m3-palette.get-theme-token($m3-theme, 'secondary-container');
+  $on-surface-variant: m3-palette.get-theme-token($m3-theme, 'on-surface-variant');
 
   .mdc-list-item {
-    color: m3-palette.get-theme-token($m3-theme, 'on-surface-variant');
+    color: $on-surface-variant;
+
+    &.mdc-list-item--with-leading-icon .mdc-list-item__start {
+      color: inherit;
+      margin-right: 0;
+      width: unset;
+      min-width: 32px;
+    }
+
+    & .mdc-list-item__primary-text {
+      color: inherit;
+    }
+
+    &.mdc-list-item--with-trailing-meta .mdc-list-item__end {
+      color: $on-surface-variant;
+    }
 
     &:hover {
       background-color: m3-palette.get-theme-token-with-state-layer($m3-theme, 'on-surface', hover);
     }
   }
-  .mdc-list-item--activated {
-    color: $on-secondary-container;
-    background-color: $secondary-container;
+  .mat-mdc-list-base {
 
-    &:hover {
-      background-color: m3-palette.get-state-layer-color($secondary-container, $on-secondary-container, hover);
+    &.mat-mdc-list-base {
+      & .mdc-list-item--activated {
+        color: $on-secondary-container;
+        background-color: $secondary-container;
+
+        &.mdc-list-item--with-leading-icon .mdc-list-item__start {
+          color: inherit;
+          margin-right: 0;
+          width: unset;
+          min-width: 32px;
+        }
+
+        & .mdc-list-item__primary-text {
+          color: inherit;
+          font-weight: bold;
+        }
+
+        &.mdc-list-item--with-trailing-meta .mdc-list-item__end {
+          color: $on-secondary-container;
+        }
+
+        &:hover {
+          background-color: m3-palette.get-state-layer-color($secondary-container, $on-secondary-container, hover);
+        }
+      }
     }
   }
 }

@@ -1,0 +1,50 @@
+@use 'sass:color';
+@use "../m3/palette" as m3-palette;
+
+$state-layer-hover: 0.08;
+
+@mixin color($m3-theme) {
+  $on-secondary-container: m3-palette.get-theme-token($m3-theme, 'on-secondary-container');
+  $secondary-container: m3-palette.get-theme-token($m3-theme, 'secondary-container');
+
+  .mdc-list-item {
+    color: m3-palette.get-theme-token($m3-theme, 'on-surface-variant');
+
+    &:hover {
+      background-color: m3-palette.get-theme-token-with-state-layer($m3-theme, 'on-surface', hover);
+    }
+  }
+  .mdc-list-item--activated {
+    color: $on-secondary-container;
+    background-color: $secondary-container;
+
+    &:hover {
+      background-color: m3-palette.get-state-layer-color($secondary-container, $on-secondary-container, hover);
+    }
+  }
+}
+
+@mixin theme() {
+  .mdc-list-item {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .mdc-list-item--with-one-line {
+    border-radius: 50px;
+
+    &.mdc-list-item--with-leading-avatar,
+    &.mdc-list-item--with-leading-icon,
+    &.mdc-list-item--with-leading-thumbnail,
+    &.mdc-list-item--with-leading-checkbox,
+    &.mdc-list-item--with-leading-radio,
+    &.mdc-list-item--with-leading-switch {
+      border-radius: 50px;
+    }
+  }
+  .mdc-list-item:hover {
+    &::before {
+      background-color: unset;
+      opacity: unset;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 @use 'sass:map';
+@use 'sass:color';
 @use './tone' as m3-tone;
+@use './state-layer' as m3-state-layer;
 
 $aa-m3-tonal-palette: (
   primary: m3-tone.$aa-blue-m3-tone,
@@ -68,6 +70,14 @@ $warning-colors: (
 
 @function get-theme-token($theme, $token) {
   @return map.get($theme, $token);
+}
+
+@function get-theme-token-with-state-layer($theme, $token, $state-layer) {
+  @return rgba(get-theme-token($theme, $token), m3-state-layer.get($state-layer));
+}
+
+@function get-state-layer-color($container-color, $content-color, $state-layer) {
+  @return color.mix($content-color, $container-color, m3-state-layer.get-percentage($state-layer));
 }
 
 @function get-design-tokens($tonal-palette, $theme-style) {

@@ -2,12 +2,14 @@
 @use "./scrollbar-theme" as scrollbar;
 @use "./sidenav-theme" as sidenav;
 @use "./toolbar-theme" as toolbar;
+@use "./list-theme" as list;
 
 @mixin color($m3-theme) {
   @include card.color($m3-theme);
   @include scrollbar.color($m3-theme);
   @include sidenav.color($m3-theme);
   @include toolbar.color($m3-theme);
+  @include list.color($m3-theme);
 }
 
 @mixin theme() {
@@ -15,4 +17,5 @@
   @include scrollbar.theme();
   @include sidenav.theme();
   @include toolbar.theme();
+  @include list.theme();
 }

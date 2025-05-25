@@ -1,0 +1,17 @@
+@use 'sass:map';
+
+$state-layer: (
+  hover: 0.08,
+  focus: 0.12,
+  press: 0.12,
+  Drag: 0.16,
+  disable: 0.38
+);
+
+@function get($state) {
+  @return map.get($state-layer, $state);
+}
+
+@function get-percentage($state) {
+  @return map.get($state-layer, $state) * 100%;
+}

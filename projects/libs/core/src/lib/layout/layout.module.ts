@@ -10,19 +10,23 @@ import {DrawerService} from "./service/drawer.service";
 import {NavigationComponent} from "./component/navigation/navigation.component";
 import { ThemeSwitcherModule } from '../component/theme-switcher/theme-switcher.module';
 import {FooterComponent} from "./component/footer/footer.component";
+import {MatListModule} from "@angular/material/list";
+import {RouterLink} from "@angular/router";
 
 const MAT_IMPORTS = [
   MatSidenavModule,
   MatButtonModule,
   MatToolbarModule,
-  MatIconModule
+  MatIconModule,
+  MatListModule
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     ...MAT_IMPORTS,
-    ThemeSwitcherModule
+    ThemeSwitcherModule,
+    RouterLink
   ],
   declarations: [
     SimpleLayoutComponent,

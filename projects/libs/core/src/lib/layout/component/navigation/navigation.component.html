@@ -1,47 +1,55 @@
 <mat-toolbar>
   My Application
 </mat-toolbar>
-<mat-nav-list>
-  <mat-list-item [activated]="true">
-    <mat-icon matListItemIcon>home</mat-icon>
-    <div matListItemTitle>Pepper</div>
-    <span matListItemMeta>
+<section class="nav-section">
+  <mat-nav-list>
+    <mat-list-item [activated]="true">
+      <mat-icon matListItemIcon>home</mat-icon>
+      <div matListItemTitle>Pepper</div>
+      <span matListItemMeta>
       <mat-icon>info</mat-icon>
     </span>
-  </mat-list-item>
-  <mat-list-item>
-    <mat-icon matListItemIcon>home</mat-icon>
-    <div matListItemTitle>Pepper</div>
-    <span matListItemMeta>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon matListItemIcon>home</mat-icon>
+      <div matListItemTitle>Pepper</div>
+      <span matListItemMeta>
       <mat-icon>info</mat-icon>
     </span>
-  </mat-list-item>
-  <mat-list-item>
-    <div matListItemTitle>Pepper</div>
-  </mat-list-item>
-  <a mat-list-item routerLink="/home">
-    <mat-icon matListItemIcon>home</mat-icon>
-    <div matListItemTitle>Home</div>
-  </a>
-  <a mat-list-item routerLink="/home">
-    <div matListItemTitle>Home</div>
-  </a>
-  <a mat-list-item routerLink="/owner">
-    <mat-icon matListItemIcon>assignment_ind</mat-icon>
-    <div matListItemTitle>Owner Actions</div>
-  </a>
-  <mat-list-item>
-    <mat-icon matListItemIcon>home</mat-icon>
-    <div matListItemTitle>Home</div>
-    <button mat-icon-button matListItemMeta>
-      <mat-icon>info</mat-icon>
-    </button>
-  </mat-list-item>
-  <mat-list-item [activated]="true">
-    <mat-icon matListItemIcon>home</mat-icon>
-    <div matListItemTitle>Home</div>
-    <button mat-icon-button matListItemMeta>
-      <mat-icon>info</mat-icon>
-    </button>
-  </mat-list-item>
-</mat-nav-list>
+    </mat-list-item>
+    <mat-list-item>
+      <div matListItemTitle>Pepper</div>
+    </mat-list-item>
+    <a mat-list-item routerLink="/home">
+      <mat-icon matListItemIcon>home</mat-icon>
+      <div matListItemTitle>Home</div>
+    </a>
+    <a mat-list-item routerLink="/home">
+      <div matListItemTitle>Home</div>
+    </a>
+    <a mat-list-item routerLink="/owner">
+      <mat-icon matListItemIcon>assignment_ind</mat-icon>
+      <div matListItemTitle>Owner Actions</div>
+    </a>
+    <mat-list-item>
+      <mat-icon matListItemIcon>home</mat-icon>
+      <div matListItemTitle>Home</div>
+      <button mat-icon-button matListItemMeta>
+        <mat-icon>info</mat-icon>
+      </button>
+    </mat-list-item>
+    <mat-list-item [activated]="true">
+      <mat-icon matListItemIcon>home</mat-icon>
+      <div matListItemTitle>Home</div>
+      <button mat-icon-button matListItemMeta>
+        <mat-icon>info</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-nav-list>
+  <mat-nav-list>
+    <mat-list-item>
+      <mat-icon matListItemIcon>home</mat-icon>
+      <div matListItemTitle>Logout</div>
+    </mat-list-item>
+  </mat-nav-list>
+</section>
